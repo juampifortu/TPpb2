@@ -3,8 +3,12 @@ import java.util.Scanner;
 
 public class Calculadora {
 	private static Scanner teclado;
-	public static void main(String[] args) {
-		
+	static Integer resultado=0;
+	public static void Multiplicacion(Integer a, Integer b) {
+		resultado = a * b;
+		System.out.println("El resultado es " + resultado.toString());
+	}
+	public static void main(String[] args) {	
 		teclado = new Scanner(System.in);
 		Integer a=0;
 		Integer b=0;
@@ -27,6 +31,7 @@ public class Calculadora {
  b = teclado.nextInt();
 //<<<<<<< HEAD
  
+
  switch (opcion) {
 	case 1:
 		System.out.println("Elegiste la opcion suma");
@@ -39,7 +44,8 @@ public class Calculadora {
 
 	case 3:
 		System.out.println("Elegiste la opcion multiplicacion");
-		resultado = a * b;
+		//resultado = a * b;
+		Multiplicacion(a,b);
 		break;
 	case 4:
 		System.out.println("Elegiste la opcion division");
@@ -57,7 +63,9 @@ public class Calculadora {
 // resultado = a / b;
 // }
 //>>>>>>> Tercer commit
- System.out.println("El resultado es " + resultado.toString());
+// System.out.println("El resultado es " + resultado.toString());
  }
+	
+	
 }
  
