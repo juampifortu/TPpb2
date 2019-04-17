@@ -2,11 +2,22 @@ package ar.edu.unlam.pb2;
 import java.util.Scanner;
 
 public class Calculadora {
+
+	
 	static Integer resultado = 0;
+		
+	
+	 public static void sumaDeValores(Integer a2, Integer b2){
+		resultado = a2 + b2;
+	 }
+	 
 	public static void resta (Integer num1, Integer num2) {
 		 resultado = num1-num2;
-	 }
-	public static void main(String[] args) {
+  }
+  
+	
+
+  public static void main(String[] args) {
 		Scanner teclado;
 		teclado = new Scanner(System.in);
 		Integer a=0;
@@ -30,11 +41,15 @@ public class Calculadora {
  b = teclado.nextInt();
 //<<<<<<< HEAD
  
+
  switch (opcion) {
 	case 1:
+		
 		System.out.println("Elegiste la opcion suma");
-		resultado = a + b;
+		sumaDeValores(a,b);
+		 
 		break;
+		
 	case 2:
 		System.out.println("Elegiste la opcion resta");
 		resta(a, b);
@@ -60,7 +75,8 @@ public class Calculadora {
 // resultado = a / b;
 // }
 //>>>>>>> Tercer commit
- System.out.println("El resultado es " + resultado.toString());
+ System.out.println("El resultado es " + resultado.toString());	
  }
+
 }
  
