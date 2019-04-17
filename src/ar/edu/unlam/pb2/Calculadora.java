@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public class Calculadora {
 
-	
 	static Integer resultado = 0;
 		
 	
@@ -14,7 +13,11 @@ public class Calculadora {
 	public static void resta (Integer num1, Integer num2) {
 		 resultado = num1-num2;
   }
-  
+    
+  public static void Multiplicacion(Integer a, Integer b) {
+		resultado = a * b;
+		System.out.println("El resultado es " + resultado.toString());
+	}
 	
 
   public static void main(String[] args) {
@@ -57,7 +60,8 @@ public class Calculadora {
 
 	case 3:
 		System.out.println("Elegiste la opcion multiplicacion");
-		resultado = a * b;
+		//resultado = a * b;
+		Multiplicacion(a,b);
 		break;
 	case 4:
 		System.out.println("Elegiste la opcion division");
@@ -75,8 +79,8 @@ public class Calculadora {
 // resultado = a / b;
 // }
 //>>>>>>> Tercer commit
+
  System.out.println("El resultado es " + resultado.toString());	
  }
-
 }
  
