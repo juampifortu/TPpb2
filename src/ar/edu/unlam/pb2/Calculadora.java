@@ -2,14 +2,17 @@ package ar.edu.unlam.pb2;
 import java.util.Scanner;
 
 public class Calculadora {
-	private static Scanner teclado;
+	static Integer resultado = 0;
+	public static void resta (Integer num1, Integer num2) {
+		 resultado = num1-num2;
+	 }
 	public static void main(String[] args) {
-		
+		Scanner teclado;
 		teclado = new Scanner(System.in);
 		Integer a=0;
 		Integer b=0;
 		Integer opcion = null;
-		Integer resultado=0;
+		
 // do{
 //<<<<<<< HEAD
 	 System.out.println("Ingrese su operaci�n \n 1 para sumar \n 2 para restar \n 3 para multiplicar \n 4 para dividir");
@@ -34,7 +37,7 @@ public class Calculadora {
 		break;
 	case 2:
 		System.out.println("Elegiste la opcion resta");
-		resultado = a - b;
+		resta(a, b);
 		break;
 
 	case 3:
